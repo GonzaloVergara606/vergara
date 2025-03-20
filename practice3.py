@@ -6,7 +6,7 @@ st.title("Gonzalo Vergara")
 
 @st.cache_data
 def load_data():
-    file_path = "/mnt/data/airbnb_data/airbnb.csv"
+    file_path = "airbnb.csv"
     df = pd.read_csv(file_path)
     df = df.rename(columns={"room_type": "listing_type", "neighbourhood": "neighborhood"})
     df.dropna(subset=["price"], inplace=True)  # Remove rows without price
